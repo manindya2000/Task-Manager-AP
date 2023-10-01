@@ -1,0 +1,17 @@
+{
+  "name": "in-class-assignment",
+  "version": "1.0.0",
+  "description": "In Class Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ladjs/graceful": "^3.2.2",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.0.1"
+  }
+}

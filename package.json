@@ -4,14 +4,17 @@
   "description": "In Class Assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@ladjs/graceful": "^3.2.2",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }

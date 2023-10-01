@@ -115,7 +115,14 @@ app.post('/tasks',(req,res)=>{
             return res.status(500).send("Something went wrong when creating the task!!!");
         }
         else{
-            return res.status(200).json(responseValidator);
+            taskData=fs.readFile(writePath,{encoding:'utf-8',flag:"r"},(err,data)=>{
+              if(err){
+                return res.status(500).send("Connot read the modified file!!");
+              }
+              else{
+                return res.status(200).json(responseValidator);
+              }
+            });
         }
     });
    }
@@ -156,7 +163,15 @@ app.put('/tasks/:id',(req,res)=>{
                 return res.status(500).send("Some problem occured during updation");
             }
             else{
-                res.status(200).send("Property got updated");
+                taskData=fs.readFile(writePath,{encoding:'utf-8',flag:"r"},(err,data)=>{
+                    if(err){
+                      return res.status(500).send("Connot read the modified file!!");
+                    }
+                    else{
+                        res.status(200).send("Property got updated");
+                    }
+                  });
+                
             }
          });
     }
@@ -182,7 +197,14 @@ app.delete('/tasks/:id',(req,res)=>{
                 return res.status(500).send("Some problem occured during updation");
             }
             else{
-                res.status(200).send("Task deleted successfully");
+                taskData=fs.readFile(writePath,{encoding:'utf-8',flag:"r"},(err,data)=>{
+                    if(err){
+                      return res.status(500).send("Connot read the modified file!!");
+                    }
+                    else{
+                        res.status(200).send("Task deleted successfully");
+                    }
+                  });
             }
          });
     }

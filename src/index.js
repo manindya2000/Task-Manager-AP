@@ -1,7 +1,7 @@
 /* Importing required libraries */
 const express=require('express');
 const Graceful=require('@ladjs/graceful');
-const taskData=require('../src/tasks.json');
+let taskData=require('../src/tasks.json');
 const path=require('path');
 const Validator=require('../src/helper/validator');
 const fs=require('fs');

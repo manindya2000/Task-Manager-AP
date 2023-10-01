@@ -1,4 +1,16 @@
+# Task Manager API
 
+This a RESTful API for a simple task manager application. 
+
+## Start Guide
+
+### Clone the Repo
+
+```bash
+https://github.com/manindya2000/Task-Manager-AP.git
+```
+
+## APIs
 
 
 | Sl No 	| Http Verbs 	| URL                      	| Description                                                                           	|
